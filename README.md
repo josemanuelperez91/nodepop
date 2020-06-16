@@ -146,7 +146,7 @@ This request will retrieve every tag used in the stored advertisements, without 
 
 - **name** (String)
 - **price** (Number)
-- **tag** (String, Multiple)
+- **tags** (String, Multiple)
 - **sale** (true or false)
 - **image** (String, URL)
 
