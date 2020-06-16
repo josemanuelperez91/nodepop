@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node --use_strict ./bin/www",
+    "start": "node NODE_ENV=production --use_strict ./bin/www",
     "dev": "cross-env DEBUG=nodeapi:* NODE_ENV=development nodemon -q --use_strict ./bin/www",
     "seed-db": "node --use_strict seed-db.js",
     "lint-project": "eslint --ignore-path .gitignore ."
