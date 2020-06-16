@@ -26,31 +26,4 @@
       <% }) %>
     </div>
   </body>
-
-  <script>
-    const requestURL = './api/adverts';
-
-    window.onload = function () {
-      fetch(requestURL, {
-        method: 'GET',
-      })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error(`API Error`);
-          }
-          return response.json();
-        })
-        .then((result) => {
-          let advertsHTML = '';
-          result.map((ad) => {
-            advertsHTML += `<li>${ad.name}</li>`;
-          });
-          document.querySelector('ul').innerHTML = advertsHTML;
-        })
-        .catch((err) => {
-          console.error(err.message);
-          throw err;
-        });
-    };
-  </script>
 </html>
